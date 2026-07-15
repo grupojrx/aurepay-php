@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  AurePay\Generated\Model
+ * @package  AurePayGenerated\Model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace AurePay\Generated\Model;
+namespace AurePayGenerated\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package AurePay\Generated\Model
+ * @package AurePayGenerated\Model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

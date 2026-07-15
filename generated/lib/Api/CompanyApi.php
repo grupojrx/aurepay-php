@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace AurePay\Generated\Api;
+namespace AurePayGenerated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use AurePay\Generated\ApiException;
-use AurePay\Generated\Configuration;
-use AurePay\Generated\FormDataProcessor;
-use AurePay\Generated\HeaderSelector;
-use AurePay\Generated\ObjectSerializer;
+use AurePayGenerated\ApiException;
+use AurePayGenerated\Configuration;
+use AurePayGenerated\FormDataProcessor;
+use AurePayGenerated\HeaderSelector;
+use AurePayGenerated\ObjectSerializer;
 
 /**
  * CompanyApi Class Doc Comment
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -135,9 +135,9 @@ class CompanyApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['companyBalance'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function companyBalance(string $contentType = self::contentTypes['companyBalance'][0])
     {
@@ -152,9 +152,9 @@ class CompanyApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['companyBalance'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function companyBalanceWithHttpInfo(string $contentType = self::contentTypes['companyBalance'][0])
     {
@@ -186,7 +186,7 @@ class CompanyApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -208,7 +208,7 @@ class CompanyApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -217,7 +217,7 @@ class CompanyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -261,7 +261,7 @@ class CompanyApi
      */
     public function companyBalanceAsyncWithHttpInfo(string $contentType = self::contentTypes['companyBalance'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->companyBalanceRequest($contentType);
 
         return $this->client
@@ -393,9 +393,9 @@ class CompanyApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['companyGet'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function companyGet(string $contentType = self::contentTypes['companyGet'][0])
     {
@@ -410,9 +410,9 @@ class CompanyApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['companyGet'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function companyGetWithHttpInfo(string $contentType = self::contentTypes['companyGet'][0])
     {
@@ -444,7 +444,7 @@ class CompanyApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -466,7 +466,7 @@ class CompanyApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -475,7 +475,7 @@ class CompanyApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -519,7 +519,7 @@ class CompanyApi
      */
     public function companyGetAsyncWithHttpInfo(string $contentType = self::contentTypes['companyGet'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->companyGetRequest($contentType);
 
         return $this->client

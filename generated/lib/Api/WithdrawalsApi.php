@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace AurePay\Generated\Api;
+namespace AurePayGenerated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use AurePay\Generated\ApiException;
-use AurePay\Generated\Configuration;
-use AurePay\Generated\FormDataProcessor;
-use AurePay\Generated\HeaderSelector;
-use AurePay\Generated\ObjectSerializer;
+use AurePayGenerated\ApiException;
+use AurePayGenerated\Configuration;
+use AurePayGenerated\FormDataProcessor;
+use AurePayGenerated\HeaderSelector;
+use AurePayGenerated\ObjectSerializer;
 
 /**
  * WithdrawalsApi Class Doc Comment
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,12 +136,12 @@ class WithdrawalsApi
      *
      * Cria saque (Pix Out)
      *
-     * @param  \AurePay\Generated\Model\WithdrawalCreate $withdrawalCreate withdrawalCreate (required)
+     * @param  \AurePayGenerated\Model\WithdrawalCreate $withdrawalCreate withdrawalCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['withdrawalsCreate'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function withdrawalsCreate($withdrawalCreate, string $contentType = self::contentTypes['withdrawalsCreate'][0])
     {
@@ -154,12 +154,12 @@ class WithdrawalsApi
      *
      * Cria saque (Pix Out)
      *
-     * @param  \AurePay\Generated\Model\WithdrawalCreate $withdrawalCreate (required)
+     * @param  \AurePayGenerated\Model\WithdrawalCreate $withdrawalCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['withdrawalsCreate'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function withdrawalsCreateWithHttpInfo($withdrawalCreate, string $contentType = self::contentTypes['withdrawalsCreate'][0])
     {
@@ -191,7 +191,7 @@ class WithdrawalsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -213,7 +213,7 @@ class WithdrawalsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -222,7 +222,7 @@ class WithdrawalsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -239,7 +239,7 @@ class WithdrawalsApi
      *
      * Cria saque (Pix Out)
      *
-     * @param  \AurePay\Generated\Model\WithdrawalCreate $withdrawalCreate (required)
+     * @param  \AurePayGenerated\Model\WithdrawalCreate $withdrawalCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['withdrawalsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -260,7 +260,7 @@ class WithdrawalsApi
      *
      * Cria saque (Pix Out)
      *
-     * @param  \AurePay\Generated\Model\WithdrawalCreate $withdrawalCreate (required)
+     * @param  \AurePayGenerated\Model\WithdrawalCreate $withdrawalCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['withdrawalsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -268,7 +268,7 @@ class WithdrawalsApi
      */
     public function withdrawalsCreateAsyncWithHttpInfo($withdrawalCreate, string $contentType = self::contentTypes['withdrawalsCreate'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->withdrawalsCreateRequest($withdrawalCreate, $contentType);
 
         return $this->client
@@ -310,7 +310,7 @@ class WithdrawalsApi
     /**
      * Create request for operation 'withdrawalsCreate'
      *
-     * @param  \AurePay\Generated\Model\WithdrawalCreate $withdrawalCreate (required)
+     * @param  \AurePayGenerated\Model\WithdrawalCreate $withdrawalCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['withdrawalsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -416,9 +416,9 @@ class WithdrawalsApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['withdrawalsGet'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function withdrawalsGet($id, string $contentType = self::contentTypes['withdrawalsGet'][0])
     {
@@ -434,9 +434,9 @@ class WithdrawalsApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['withdrawalsGet'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function withdrawalsGetWithHttpInfo($id, string $contentType = self::contentTypes['withdrawalsGet'][0])
     {
@@ -468,7 +468,7 @@ class WithdrawalsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -490,7 +490,7 @@ class WithdrawalsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -499,7 +499,7 @@ class WithdrawalsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -545,7 +545,7 @@ class WithdrawalsApi
      */
     public function withdrawalsGetAsyncWithHttpInfo($id, string $contentType = self::contentTypes['withdrawalsGet'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->withdrawalsGetRequest($id, $contentType);
 
         return $this->client
@@ -693,9 +693,9 @@ class WithdrawalsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['withdrawalsList'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function withdrawalsList(string $contentType = self::contentTypes['withdrawalsList'][0])
     {
@@ -710,9 +710,9 @@ class WithdrawalsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['withdrawalsList'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function withdrawalsListWithHttpInfo(string $contentType = self::contentTypes['withdrawalsList'][0])
     {
@@ -744,7 +744,7 @@ class WithdrawalsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -766,7 +766,7 @@ class WithdrawalsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -775,7 +775,7 @@ class WithdrawalsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -819,7 +819,7 @@ class WithdrawalsApi
      */
     public function withdrawalsListAsyncWithHttpInfo(string $contentType = self::contentTypes['withdrawalsList'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->withdrawalsListRequest($contentType);
 
         return $this->client

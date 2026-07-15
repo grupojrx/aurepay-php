@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace AurePay\Generated\Api;
+namespace AurePayGenerated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use AurePay\Generated\ApiException;
-use AurePay\Generated\Configuration;
-use AurePay\Generated\FormDataProcessor;
-use AurePay\Generated\HeaderSelector;
-use AurePay\Generated\ObjectSerializer;
+use AurePayGenerated\ApiException;
+use AurePayGenerated\Configuration;
+use AurePayGenerated\FormDataProcessor;
+use AurePayGenerated\HeaderSelector;
+use AurePayGenerated\ObjectSerializer;
 
 /**
  * WebhooksApi Class Doc Comment
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -142,12 +142,12 @@ class WebhooksApi
      *
      * Cria webhook
      *
-     * @param  \AurePay\Generated\Model\WebhookCreate $webhookCreate webhookCreate (required)
+     * @param  \AurePayGenerated\Model\WebhookCreate $webhookCreate webhookCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksCreate'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function webhooksCreate($webhookCreate, string $contentType = self::contentTypes['webhooksCreate'][0])
     {
@@ -160,12 +160,12 @@ class WebhooksApi
      *
      * Cria webhook
      *
-     * @param  \AurePay\Generated\Model\WebhookCreate $webhookCreate (required)
+     * @param  \AurePayGenerated\Model\WebhookCreate $webhookCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksCreate'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhooksCreateWithHttpInfo($webhookCreate, string $contentType = self::contentTypes['webhooksCreate'][0])
     {
@@ -197,7 +197,7 @@ class WebhooksApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -219,7 +219,7 @@ class WebhooksApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -228,7 +228,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -245,7 +245,7 @@ class WebhooksApi
      *
      * Cria webhook
      *
-     * @param  \AurePay\Generated\Model\WebhookCreate $webhookCreate (required)
+     * @param  \AurePayGenerated\Model\WebhookCreate $webhookCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -266,7 +266,7 @@ class WebhooksApi
      *
      * Cria webhook
      *
-     * @param  \AurePay\Generated\Model\WebhookCreate $webhookCreate (required)
+     * @param  \AurePayGenerated\Model\WebhookCreate $webhookCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -274,7 +274,7 @@ class WebhooksApi
      */
     public function webhooksCreateAsyncWithHttpInfo($webhookCreate, string $contentType = self::contentTypes['webhooksCreate'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->webhooksCreateRequest($webhookCreate, $contentType);
 
         return $this->client
@@ -316,7 +316,7 @@ class WebhooksApi
     /**
      * Create request for operation 'webhooksCreate'
      *
-     * @param  \AurePay\Generated\Model\WebhookCreate $webhookCreate (required)
+     * @param  \AurePayGenerated\Model\WebhookCreate $webhookCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -422,9 +422,9 @@ class WebhooksApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksDelete'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function webhooksDelete($id, string $contentType = self::contentTypes['webhooksDelete'][0])
     {
@@ -440,9 +440,9 @@ class WebhooksApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksDelete'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhooksDeleteWithHttpInfo($id, string $contentType = self::contentTypes['webhooksDelete'][0])
     {
@@ -474,7 +474,7 @@ class WebhooksApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -496,7 +496,7 @@ class WebhooksApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -505,7 +505,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -551,7 +551,7 @@ class WebhooksApi
      */
     public function webhooksDeleteAsyncWithHttpInfo($id, string $contentType = self::contentTypes['webhooksDelete'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->webhooksDeleteRequest($id, $contentType);
 
         return $this->client
@@ -700,9 +700,9 @@ class WebhooksApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksGet'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function webhooksGet($id, string $contentType = self::contentTypes['webhooksGet'][0])
     {
@@ -718,9 +718,9 @@ class WebhooksApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksGet'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhooksGetWithHttpInfo($id, string $contentType = self::contentTypes['webhooksGet'][0])
     {
@@ -752,7 +752,7 @@ class WebhooksApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -774,7 +774,7 @@ class WebhooksApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -783,7 +783,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -829,7 +829,7 @@ class WebhooksApi
      */
     public function webhooksGetAsyncWithHttpInfo($id, string $contentType = self::contentTypes['webhooksGet'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->webhooksGetRequest($id, $contentType);
 
         return $this->client
@@ -977,9 +977,9 @@ class WebhooksApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksList'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function webhooksList(string $contentType = self::contentTypes['webhooksList'][0])
     {
@@ -994,9 +994,9 @@ class WebhooksApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksList'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhooksListWithHttpInfo(string $contentType = self::contentTypes['webhooksList'][0])
     {
@@ -1028,7 +1028,7 @@ class WebhooksApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -1050,7 +1050,7 @@ class WebhooksApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -1059,7 +1059,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1103,7 +1103,7 @@ class WebhooksApi
      */
     public function webhooksListAsyncWithHttpInfo(string $contentType = self::contentTypes['webhooksList'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->webhooksListRequest($contentType);
 
         return $this->client
@@ -1234,12 +1234,12 @@ class WebhooksApi
      * Atualiza webhook
      *
      * @param  string $id Identificador ULID do recurso (required)
-     * @param  \AurePay\Generated\Model\WebhookCreate|null $webhookCreate webhookCreate (optional)
+     * @param  \AurePayGenerated\Model\WebhookCreate|null $webhookCreate webhookCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksUpdate'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function webhooksUpdate($id, $webhookCreate = null, string $contentType = self::contentTypes['webhooksUpdate'][0])
     {
@@ -1253,12 +1253,12 @@ class WebhooksApi
      * Atualiza webhook
      *
      * @param  string $id Identificador ULID do recurso (required)
-     * @param  \AurePay\Generated\Model\WebhookCreate|null $webhookCreate (optional)
+     * @param  \AurePayGenerated\Model\WebhookCreate|null $webhookCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksUpdate'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhooksUpdateWithHttpInfo($id, $webhookCreate = null, string $contentType = self::contentTypes['webhooksUpdate'][0])
     {
@@ -1290,7 +1290,7 @@ class WebhooksApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -1312,7 +1312,7 @@ class WebhooksApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -1321,7 +1321,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1339,7 +1339,7 @@ class WebhooksApi
      * Atualiza webhook
      *
      * @param  string $id Identificador ULID do recurso (required)
-     * @param  \AurePay\Generated\Model\WebhookCreate|null $webhookCreate (optional)
+     * @param  \AurePayGenerated\Model\WebhookCreate|null $webhookCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1361,7 +1361,7 @@ class WebhooksApi
      * Atualiza webhook
      *
      * @param  string $id Identificador ULID do recurso (required)
-     * @param  \AurePay\Generated\Model\WebhookCreate|null $webhookCreate (optional)
+     * @param  \AurePayGenerated\Model\WebhookCreate|null $webhookCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1369,7 +1369,7 @@ class WebhooksApi
      */
     public function webhooksUpdateAsyncWithHttpInfo($id, $webhookCreate = null, string $contentType = self::contentTypes['webhooksUpdate'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->webhooksUpdateRequest($id, $webhookCreate, $contentType);
 
         return $this->client
@@ -1412,7 +1412,7 @@ class WebhooksApi
      * Create request for operation 'webhooksUpdate'
      *
      * @param  string $id Identificador ULID do recurso (required)
-     * @param  \AurePay\Generated\Model\WebhookCreate|null $webhookCreate (optional)
+     * @param  \AurePayGenerated\Model\WebhookCreate|null $webhookCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

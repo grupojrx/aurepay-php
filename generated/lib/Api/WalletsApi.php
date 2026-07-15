@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace AurePay\Generated\Api;
+namespace AurePayGenerated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use AurePay\Generated\ApiException;
-use AurePay\Generated\Configuration;
-use AurePay\Generated\FormDataProcessor;
-use AurePay\Generated\HeaderSelector;
-use AurePay\Generated\ObjectSerializer;
+use AurePayGenerated\ApiException;
+use AurePayGenerated\Configuration;
+use AurePayGenerated\FormDataProcessor;
+use AurePayGenerated\HeaderSelector;
+use AurePayGenerated\ObjectSerializer;
 
 /**
  * WalletsApi Class Doc Comment
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,12 +136,12 @@ class WalletsApi
      *
      * Cria carteira
      *
-     * @param  \AurePay\Generated\Model\WalletCreate|null $walletCreate walletCreate (optional)
+     * @param  \AurePayGenerated\Model\WalletCreate|null $walletCreate walletCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['walletsCreate'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function walletsCreate($walletCreate = null, string $contentType = self::contentTypes['walletsCreate'][0])
     {
@@ -154,12 +154,12 @@ class WalletsApi
      *
      * Cria carteira
      *
-     * @param  \AurePay\Generated\Model\WalletCreate|null $walletCreate (optional)
+     * @param  \AurePayGenerated\Model\WalletCreate|null $walletCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['walletsCreate'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function walletsCreateWithHttpInfo($walletCreate = null, string $contentType = self::contentTypes['walletsCreate'][0])
     {
@@ -191,7 +191,7 @@ class WalletsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -213,7 +213,7 @@ class WalletsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -222,7 +222,7 @@ class WalletsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -239,7 +239,7 @@ class WalletsApi
      *
      * Cria carteira
      *
-     * @param  \AurePay\Generated\Model\WalletCreate|null $walletCreate (optional)
+     * @param  \AurePayGenerated\Model\WalletCreate|null $walletCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['walletsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -260,7 +260,7 @@ class WalletsApi
      *
      * Cria carteira
      *
-     * @param  \AurePay\Generated\Model\WalletCreate|null $walletCreate (optional)
+     * @param  \AurePayGenerated\Model\WalletCreate|null $walletCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['walletsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -268,7 +268,7 @@ class WalletsApi
      */
     public function walletsCreateAsyncWithHttpInfo($walletCreate = null, string $contentType = self::contentTypes['walletsCreate'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->walletsCreateRequest($walletCreate, $contentType);
 
         return $this->client
@@ -310,7 +310,7 @@ class WalletsApi
     /**
      * Create request for operation 'walletsCreate'
      *
-     * @param  \AurePay\Generated\Model\WalletCreate|null $walletCreate (optional)
+     * @param  \AurePayGenerated\Model\WalletCreate|null $walletCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['walletsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -410,9 +410,9 @@ class WalletsApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['walletsGet'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function walletsGet($id, string $contentType = self::contentTypes['walletsGet'][0])
     {
@@ -428,9 +428,9 @@ class WalletsApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['walletsGet'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function walletsGetWithHttpInfo($id, string $contentType = self::contentTypes['walletsGet'][0])
     {
@@ -462,7 +462,7 @@ class WalletsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -484,7 +484,7 @@ class WalletsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -493,7 +493,7 @@ class WalletsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -539,7 +539,7 @@ class WalletsApi
      */
     public function walletsGetAsyncWithHttpInfo($id, string $contentType = self::contentTypes['walletsGet'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->walletsGetRequest($id, $contentType);
 
         return $this->client
@@ -687,9 +687,9 @@ class WalletsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['walletsList'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function walletsList(string $contentType = self::contentTypes['walletsList'][0])
     {
@@ -704,9 +704,9 @@ class WalletsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['walletsList'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function walletsListWithHttpInfo(string $contentType = self::contentTypes['walletsList'][0])
     {
@@ -738,7 +738,7 @@ class WalletsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -760,7 +760,7 @@ class WalletsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -769,7 +769,7 @@ class WalletsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -813,7 +813,7 @@ class WalletsApi
      */
     public function walletsListAsyncWithHttpInfo(string $contentType = self::contentTypes['walletsList'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->walletsListRequest($contentType);
 
         return $this->client

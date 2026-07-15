@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace AurePay\Generated\Model;
+namespace AurePayGenerated\Model;
 
 use \ArrayAccess;
-use \AurePay\Generated\ObjectSerializer;
+use \AurePayGenerated\ObjectSerializer;
 
 /**
  * SuccessEnvelope Class Doc Comment
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>

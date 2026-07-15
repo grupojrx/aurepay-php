@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace AurePay\Generated\Model;
+namespace AurePayGenerated\Model;
 
 use \ArrayAccess;
-use \AurePay\Generated\ObjectSerializer;
+use \AurePayGenerated\ObjectSerializer;
 
 /**
  * ErrorBody Class Doc Comment
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ErrorBody implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $openAPITypes = [
         'success' => 'bool',
-        'error' => '\AurePay\Generated\Model\ErrorBodyError'
+        'error' => '\AurePayGenerated\Model\ErrorBodyError'
     ];
 
     /**
@@ -364,7 +364,7 @@ class ErrorBody implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets error
      *
-     * @return \AurePay\Generated\Model\ErrorBodyError
+     * @return \AurePayGenerated\Model\ErrorBodyError
      */
     public function getError()
     {
@@ -374,7 +374,7 @@ class ErrorBody implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets error
      *
-     * @param \AurePay\Generated\Model\ErrorBodyError $error error
+     * @param \AurePayGenerated\Model\ErrorBodyError $error error
      *
      * @return self
      */

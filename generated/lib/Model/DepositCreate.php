@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace AurePay\Generated\Model;
+namespace AurePayGenerated\Model;
 
 use \ArrayAccess;
-use \AurePay\Generated\ObjectSerializer;
+use \AurePayGenerated\ObjectSerializer;
 
 /**
  * DepositCreate Class Doc Comment
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class DepositCreate implements ModelInterface, ArrayAccess, \JsonSerializable
         'reference' => 'string',
         'expiration' => '\DateTime',
         'callbackUrl' => 'string',
-        'customer' => '\AurePay\Generated\Model\CustomerInput',
+        'customer' => '\AurePayGenerated\Model\CustomerInput',
         'metadata' => 'array<string,mixed>',
         'splits' => 'array<string,mixed>[]'
     ];
@@ -516,7 +516,7 @@ class DepositCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets customer
      *
-     * @return \AurePay\Generated\Model\CustomerInput|null
+     * @return \AurePayGenerated\Model\CustomerInput|null
      */
     public function getCustomer()
     {
@@ -526,7 +526,7 @@ class DepositCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets customer
      *
-     * @param \AurePay\Generated\Model\CustomerInput|null $customer customer
+     * @param \AurePayGenerated\Model\CustomerInput|null $customer customer
      *
      * @return self
      */

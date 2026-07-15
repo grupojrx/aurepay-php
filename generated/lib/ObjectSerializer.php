@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace AurePay\Generated;
+namespace AurePayGenerated;
 
 use GuzzleHttp\Psr7\Utils;
-use AurePay\Generated\Model\ModelInterface;
+use AurePayGenerated\Model\ModelInterface;
 
 /**
  * ObjectSerializer Class Doc Comment
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -507,7 +507,7 @@ class ObjectSerializer
             // If a discriminator is defined and points to a valid subclass, use it.
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\AurePay\Generated\Model\\' . $data->{$discriminator};
+                $subclass = '\AurePayGenerated\Model\\' . $data->{$discriminator};
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }

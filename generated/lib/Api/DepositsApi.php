@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace AurePay\Generated\Api;
+namespace AurePayGenerated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use AurePay\Generated\ApiException;
-use AurePay\Generated\Configuration;
-use AurePay\Generated\FormDataProcessor;
-use AurePay\Generated\HeaderSelector;
-use AurePay\Generated\ObjectSerializer;
+use AurePayGenerated\ApiException;
+use AurePayGenerated\Configuration;
+use AurePayGenerated\FormDataProcessor;
+use AurePayGenerated\HeaderSelector;
+use AurePayGenerated\ObjectSerializer;
 
 /**
  * DepositsApi Class Doc Comment
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -139,12 +139,12 @@ class DepositsApi
      *
      * Cria depósito (Pix In)
      *
-     * @param  \AurePay\Generated\Model\DepositCreate $depositCreate depositCreate (required)
+     * @param  \AurePayGenerated\Model\DepositCreate $depositCreate depositCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depositsCreate'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope|\AurePay\Generated\Model\ErrorBody|\AurePay\Generated\Model\ErrorBody
+     * @return \AurePayGenerated\Model\SuccessEnvelope|\AurePayGenerated\Model\ErrorBody|\AurePayGenerated\Model\ErrorBody
      */
     public function depositsCreate($depositCreate, string $contentType = self::contentTypes['depositsCreate'][0])
     {
@@ -157,12 +157,12 @@ class DepositsApi
      *
      * Cria depósito (Pix In)
      *
-     * @param  \AurePay\Generated\Model\DepositCreate $depositCreate (required)
+     * @param  \AurePayGenerated\Model\DepositCreate $depositCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depositsCreate'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope|\AurePay\Generated\Model\ErrorBody|\AurePay\Generated\Model\ErrorBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope|\AurePayGenerated\Model\ErrorBody|\AurePayGenerated\Model\ErrorBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function depositsCreateWithHttpInfo($depositCreate, string $contentType = self::contentTypes['depositsCreate'][0])
     {
@@ -194,19 +194,19 @@ class DepositsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\ErrorBody',
+                        '\AurePayGenerated\Model\ErrorBody',
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\ErrorBody',
+                        '\AurePayGenerated\Model\ErrorBody',
                         $request,
                         $response,
                     );
@@ -228,7 +228,7 @@ class DepositsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -237,7 +237,7 @@ class DepositsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -245,7 +245,7 @@ class DepositsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\ErrorBody',
+                        '\AurePayGenerated\Model\ErrorBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -253,7 +253,7 @@ class DepositsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\ErrorBody',
+                        '\AurePayGenerated\Model\ErrorBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class DepositsApi
      *
      * Cria depósito (Pix In)
      *
-     * @param  \AurePay\Generated\Model\DepositCreate $depositCreate (required)
+     * @param  \AurePayGenerated\Model\DepositCreate $depositCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depositsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -291,7 +291,7 @@ class DepositsApi
      *
      * Cria depósito (Pix In)
      *
-     * @param  \AurePay\Generated\Model\DepositCreate $depositCreate (required)
+     * @param  \AurePayGenerated\Model\DepositCreate $depositCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depositsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -299,7 +299,7 @@ class DepositsApi
      */
     public function depositsCreateAsyncWithHttpInfo($depositCreate, string $contentType = self::contentTypes['depositsCreate'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->depositsCreateRequest($depositCreate, $contentType);
 
         return $this->client
@@ -341,7 +341,7 @@ class DepositsApi
     /**
      * Create request for operation 'depositsCreate'
      *
-     * @param  \AurePay\Generated\Model\DepositCreate $depositCreate (required)
+     * @param  \AurePayGenerated\Model\DepositCreate $depositCreate (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depositsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -447,9 +447,9 @@ class DepositsApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depositsGet'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope|\AurePay\Generated\Model\ErrorBody
+     * @return \AurePayGenerated\Model\SuccessEnvelope|\AurePayGenerated\Model\ErrorBody
      */
     public function depositsGet($id, string $contentType = self::contentTypes['depositsGet'][0])
     {
@@ -465,9 +465,9 @@ class DepositsApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depositsGet'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope|\AurePay\Generated\Model\ErrorBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope|\AurePayGenerated\Model\ErrorBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function depositsGetWithHttpInfo($id, string $contentType = self::contentTypes['depositsGet'][0])
     {
@@ -499,13 +499,13 @@ class DepositsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\ErrorBody',
+                        '\AurePayGenerated\Model\ErrorBody',
                         $request,
                         $response,
                     );
@@ -527,7 +527,7 @@ class DepositsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -536,7 +536,7 @@ class DepositsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -544,7 +544,7 @@ class DepositsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\ErrorBody',
+                        '\AurePayGenerated\Model\ErrorBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -590,7 +590,7 @@ class DepositsApi
      */
     public function depositsGetAsyncWithHttpInfo($id, string $contentType = self::contentTypes['depositsGet'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->depositsGetRequest($id, $contentType);
 
         return $this->client
@@ -738,9 +738,9 @@ class DepositsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depositsList'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope|\AurePay\Generated\Model\ErrorBody
+     * @return \AurePayGenerated\Model\SuccessEnvelope|\AurePayGenerated\Model\ErrorBody
      */
     public function depositsList(string $contentType = self::contentTypes['depositsList'][0])
     {
@@ -755,9 +755,9 @@ class DepositsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depositsList'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope|\AurePay\Generated\Model\ErrorBody, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope|\AurePayGenerated\Model\ErrorBody, HTTP status code, HTTP response headers (array of strings)
      */
     public function depositsListWithHttpInfo(string $contentType = self::contentTypes['depositsList'][0])
     {
@@ -789,13 +789,13 @@ class DepositsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\ErrorBody',
+                        '\AurePayGenerated\Model\ErrorBody',
                         $request,
                         $response,
                     );
@@ -817,7 +817,7 @@ class DepositsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -826,7 +826,7 @@ class DepositsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -834,7 +834,7 @@ class DepositsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\ErrorBody',
+                        '\AurePayGenerated\Model\ErrorBody',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -878,7 +878,7 @@ class DepositsApi
      */
     public function depositsListAsyncWithHttpInfo(string $contentType = self::contentTypes['depositsList'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->depositsListRequest($contentType);
 
         return $this->client
@@ -1011,9 +1011,9 @@ class DepositsApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depositsRefund'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function depositsRefund($id, string $contentType = self::contentTypes['depositsRefund'][0])
     {
@@ -1029,9 +1029,9 @@ class DepositsApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depositsRefund'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function depositsRefundWithHttpInfo($id, string $contentType = self::contentTypes['depositsRefund'][0])
     {
@@ -1063,7 +1063,7 @@ class DepositsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -1085,7 +1085,7 @@ class DepositsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -1094,7 +1094,7 @@ class DepositsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1140,7 +1140,7 @@ class DepositsApi
      */
     public function depositsRefundAsyncWithHttpInfo($id, string $contentType = self::contentTypes['depositsRefund'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->depositsRefundRequest($id, $contentType);
 
         return $this->client

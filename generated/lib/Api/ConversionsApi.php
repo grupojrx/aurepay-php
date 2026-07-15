@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace AurePay\Generated\Api;
+namespace AurePayGenerated\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -36,17 +36,17 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use AurePay\Generated\ApiException;
-use AurePay\Generated\Configuration;
-use AurePay\Generated\FormDataProcessor;
-use AurePay\Generated\HeaderSelector;
-use AurePay\Generated\ObjectSerializer;
+use AurePayGenerated\ApiException;
+use AurePayGenerated\Configuration;
+use AurePayGenerated\FormDataProcessor;
+use AurePayGenerated\HeaderSelector;
+use AurePayGenerated\ObjectSerializer;
 
 /**
  * ConversionsApi Class Doc Comment
  *
  * @category Class
- * @package  AurePay\Generated
+ * @package  AurePayGenerated
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -139,12 +139,12 @@ class ConversionsApi
      *
      * Cria conversão
      *
-     * @param  \AurePay\Generated\Model\ConversionCreate|null $conversionCreate conversionCreate (optional)
+     * @param  \AurePayGenerated\Model\ConversionCreate|null $conversionCreate conversionCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsCreate'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function conversionsCreate($conversionCreate = null, string $contentType = self::contentTypes['conversionsCreate'][0])
     {
@@ -157,12 +157,12 @@ class ConversionsApi
      *
      * Cria conversão
      *
-     * @param  \AurePay\Generated\Model\ConversionCreate|null $conversionCreate (optional)
+     * @param  \AurePayGenerated\Model\ConversionCreate|null $conversionCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsCreate'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function conversionsCreateWithHttpInfo($conversionCreate = null, string $contentType = self::contentTypes['conversionsCreate'][0])
     {
@@ -194,7 +194,7 @@ class ConversionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -216,7 +216,7 @@ class ConversionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -225,7 +225,7 @@ class ConversionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -242,7 +242,7 @@ class ConversionsApi
      *
      * Cria conversão
      *
-     * @param  \AurePay\Generated\Model\ConversionCreate|null $conversionCreate (optional)
+     * @param  \AurePayGenerated\Model\ConversionCreate|null $conversionCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -263,7 +263,7 @@ class ConversionsApi
      *
      * Cria conversão
      *
-     * @param  \AurePay\Generated\Model\ConversionCreate|null $conversionCreate (optional)
+     * @param  \AurePayGenerated\Model\ConversionCreate|null $conversionCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -271,7 +271,7 @@ class ConversionsApi
      */
     public function conversionsCreateAsyncWithHttpInfo($conversionCreate = null, string $contentType = self::contentTypes['conversionsCreate'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->conversionsCreateRequest($conversionCreate, $contentType);
 
         return $this->client
@@ -313,7 +313,7 @@ class ConversionsApi
     /**
      * Create request for operation 'conversionsCreate'
      *
-     * @param  \AurePay\Generated\Model\ConversionCreate|null $conversionCreate (optional)
+     * @param  \AurePayGenerated\Model\ConversionCreate|null $conversionCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -413,9 +413,9 @@ class ConversionsApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsGet'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function conversionsGet($id, string $contentType = self::contentTypes['conversionsGet'][0])
     {
@@ -431,9 +431,9 @@ class ConversionsApi
      * @param  string $id Identificador ULID do recurso (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsGet'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function conversionsGetWithHttpInfo($id, string $contentType = self::contentTypes['conversionsGet'][0])
     {
@@ -465,7 +465,7 @@ class ConversionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -487,7 +487,7 @@ class ConversionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -496,7 +496,7 @@ class ConversionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -542,7 +542,7 @@ class ConversionsApi
      */
     public function conversionsGetAsyncWithHttpInfo($id, string $contentType = self::contentTypes['conversionsGet'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->conversionsGetRequest($id, $contentType);
 
         return $this->client
@@ -690,9 +690,9 @@ class ConversionsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsList'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function conversionsList(string $contentType = self::contentTypes['conversionsList'][0])
     {
@@ -707,9 +707,9 @@ class ConversionsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsList'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function conversionsListWithHttpInfo(string $contentType = self::contentTypes['conversionsList'][0])
     {
@@ -741,7 +741,7 @@ class ConversionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -763,7 +763,7 @@ class ConversionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -772,7 +772,7 @@ class ConversionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -816,7 +816,7 @@ class ConversionsApi
      */
     public function conversionsListAsyncWithHttpInfo(string $contentType = self::contentTypes['conversionsList'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->conversionsListRequest($contentType);
 
         return $this->client
@@ -946,12 +946,12 @@ class ConversionsApi
      *
      * Cotação de conversão
      *
-     * @param  \AurePay\Generated\Model\ConversionCreate|null $conversionCreate conversionCreate (optional)
+     * @param  \AurePayGenerated\Model\ConversionCreate|null $conversionCreate conversionCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsQuote'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \AurePay\Generated\Model\SuccessEnvelope
+     * @return \AurePayGenerated\Model\SuccessEnvelope
      */
     public function conversionsQuote($conversionCreate = null, string $contentType = self::contentTypes['conversionsQuote'][0])
     {
@@ -964,12 +964,12 @@ class ConversionsApi
      *
      * Cotação de conversão
      *
-     * @param  \AurePay\Generated\Model\ConversionCreate|null $conversionCreate (optional)
+     * @param  \AurePayGenerated\Model\ConversionCreate|null $conversionCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsQuote'] to see the possible values for this operation
      *
-     * @throws \AurePay\Generated\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \AurePayGenerated\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \AurePay\Generated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \AurePayGenerated\Model\SuccessEnvelope, HTTP status code, HTTP response headers (array of strings)
      */
     public function conversionsQuoteWithHttpInfo($conversionCreate = null, string $contentType = self::contentTypes['conversionsQuote'][0])
     {
@@ -1001,7 +1001,7 @@ class ConversionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $request,
                         $response,
                     );
@@ -1023,7 +1023,7 @@ class ConversionsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\AurePay\Generated\Model\SuccessEnvelope',
+                '\AurePayGenerated\Model\SuccessEnvelope',
                 $request,
                 $response,
             );
@@ -1032,7 +1032,7 @@ class ConversionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\AurePay\Generated\Model\SuccessEnvelope',
+                        '\AurePayGenerated\Model\SuccessEnvelope',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1049,7 +1049,7 @@ class ConversionsApi
      *
      * Cotação de conversão
      *
-     * @param  \AurePay\Generated\Model\ConversionCreate|null $conversionCreate (optional)
+     * @param  \AurePayGenerated\Model\ConversionCreate|null $conversionCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsQuote'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1070,7 +1070,7 @@ class ConversionsApi
      *
      * Cotação de conversão
      *
-     * @param  \AurePay\Generated\Model\ConversionCreate|null $conversionCreate (optional)
+     * @param  \AurePayGenerated\Model\ConversionCreate|null $conversionCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsQuote'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1078,7 +1078,7 @@ class ConversionsApi
      */
     public function conversionsQuoteAsyncWithHttpInfo($conversionCreate = null, string $contentType = self::contentTypes['conversionsQuote'][0])
     {
-        $returnType = '\AurePay\Generated\Model\SuccessEnvelope';
+        $returnType = '\AurePayGenerated\Model\SuccessEnvelope';
         $request = $this->conversionsQuoteRequest($conversionCreate, $contentType);
 
         return $this->client
@@ -1120,7 +1120,7 @@ class ConversionsApi
     /**
      * Create request for operation 'conversionsQuote'
      *
-     * @param  \AurePay\Generated\Model\ConversionCreate|null $conversionCreate (optional)
+     * @param  \AurePayGenerated\Model\ConversionCreate|null $conversionCreate (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['conversionsQuote'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
