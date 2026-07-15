@@ -1,0 +1,31 @@
+{
+  "name": "aurepay/sdk",
+  "description": "SDK oficial da API AurePay para PHP (tipado via OpenAPI)",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.1",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "guzzlehttp/guzzle": "^7.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "AurePay\\": "src/",
+      "AurePay\\Generated\\": "generated/lib/"
+    }
+  },
+  "keywords": [
+    "aurepay",
+    "pix",
+    "payments",
+    "brazil",
+    "sdk",
+    "openapi"
+  ],
+  "homepage": "https://api.aurepay.com.br/docs/sdks",
+  "support": {
+    "docs": "https://api.aurepay.com.br/docs",
+    "source": "https://github.com/grupojrx/aurepay-php"
+  }
+}

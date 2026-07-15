@@ -1,0 +1,73 @@
+# Packagist versiona por git tag. Validate em todo push; release só se o SDK mudou.
+name: Packagist
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+  release:
+    if: github.event_name == 'workflow_dispatch'
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Should publish?
+        id: decide
+        run: |
+          set +e
+          node scripts/should-publish.mjs
+          code=$?
+          set -e
+          if [ "$code" -eq 10 ]; then
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$code" -ne 0 ]; then
+            exit "$code"
+          fi
+          echo "publish=true" >> "$GITHUB_OUTPUT"
+          echo "version=$(tr -d '[:space:]' < VERSION | sed 's/^v//')" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub release (Packagist webhook)
+        if: steps.decide.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION="${{ steps.decide.outputs.version }}"
+          TAG="v${VERSION}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG already exists"
+            exit 1
+          fi
+          gh release create "$TAG" --title "$TAG" --notes "aurepay/sdk ${TAG}" --target "${{ github.sha }}"
+
+      - name: Skipped
+        if: steps.decide.outputs.publish != 'true'
+        run: echo "Nenhuma alteração no SDK PHP — release ignorado."
