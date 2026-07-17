@@ -1,6 +1,6 @@
 <?php
 /**
- * WalletCreate
+ * WalletVerification
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \AurePayGenerated\ObjectSerializer;
 
 /**
- * WalletCreate Class Doc Comment
+ * WalletVerification Class Doc Comment
  *
  * @category Class
  * @package  AurePayGenerated
@@ -40,7 +40,7 @@ use \AurePayGenerated\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class WalletCreate implements ModelInterface, ArrayAccess, \JsonSerializable
+class WalletVerification implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class WalletCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @var string
      */
-    protected static $openAPIModelName = 'WalletCreate';
+    protected static $openAPIModelName = 'WalletVerification';
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -57,11 +57,10 @@ class WalletCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $openAPITypes = [
-        'name' => 'string',
-        'externalId' => 'string',
-        'taxId' => 'string',
-        'email' => 'string',
-        'phone' => 'string'
+        'status' => 'string',
+        'inviteEmail' => 'string',
+        'invitePhone' => 'string',
+        'rejection' => '\AurePayGenerated\Model\WalletVerificationRejection'
     ];
 
     /**
@@ -72,11 +71,10 @@ class WalletCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'name' => null,
-        'externalId' => null,
-        'taxId' => null,
-        'email' => 'email',
-        'phone' => null
+        'status' => null,
+        'inviteEmail' => 'email',
+        'invitePhone' => null,
+        'rejection' => null
     ];
 
     /**
@@ -85,11 +83,10 @@ class WalletCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'name' => false,
-        'externalId' => false,
-        'taxId' => false,
-        'email' => false,
-        'phone' => false
+        'status' => false,
+        'inviteEmail' => false,
+        'invitePhone' => false,
+        'rejection' => false
     ];
 
     /**
@@ -178,11 +175,10 @@ class WalletCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-        'externalId' => 'externalId',
-        'taxId' => 'taxId',
-        'email' => 'email',
-        'phone' => 'phone'
+        'status' => 'status',
+        'inviteEmail' => 'inviteEmail',
+        'invitePhone' => 'invitePhone',
+        'rejection' => 'rejection'
     ];
 
     /**
@@ -191,11 +187,10 @@ class WalletCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'externalId' => 'setExternalId',
-        'taxId' => 'setTaxId',
-        'email' => 'setEmail',
-        'phone' => 'setPhone'
+        'status' => 'setStatus',
+        'inviteEmail' => 'setInviteEmail',
+        'invitePhone' => 'setInvitePhone',
+        'rejection' => 'setRejection'
     ];
 
     /**
@@ -204,11 +199,10 @@ class WalletCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'externalId' => 'getExternalId',
-        'taxId' => 'getTaxId',
-        'email' => 'getEmail',
-        'phone' => 'getPhone'
+        'status' => 'getStatus',
+        'inviteEmail' => 'getInviteEmail',
+        'invitePhone' => 'getInvitePhone',
+        'rejection' => 'getRejection'
     ];
 
     /**
@@ -252,6 +246,27 @@ class WalletCreate implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
+    public const STATUS_INVITED = 'invited';
+    public const STATUS_SUBMITTED = 'submitted';
+    public const STATUS_APPROVED = 'approved';
+    public const STATUS_REJECTED = 'rejected';
+    public const STATUS_REJECTED_TERMINAL = 'rejectedTerminal';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_INVITED,
+            self::STATUS_SUBMITTED,
+            self::STATUS_APPROVED,
+            self::STATUS_REJECTED,
+            self::STATUS_REJECTED_TERMINAL,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -268,11 +283,10 @@ class WalletCreate implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('externalId', $data ?? [], null);
-        $this->setIfExists('taxId', $data ?? [], null);
-        $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('phone', $data ?? [], null);
+        $this->setIfExists('status', $data ?? [], null);
+        $this->setIfExists('inviteEmail', $data ?? [], null);
+        $this->setIfExists('invitePhone', $data ?? [], null);
+        $this->setIfExists('rejection', $data ?? [], null);
     }
 
     /**
@@ -302,15 +316,13 @@ class WalletCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-        if ((mb_strlen($this->container['name']) > 120)) {
-            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 120.";
-        }
-
-        if (!is_null($this->container['externalId']) && (mb_strlen($this->container['externalId']) > 128)) {
-            $invalidProperties[] = "invalid value for 'externalId', the character length must be smaller than or equal to 128.";
+        $allowedValues = $this->getStatusAllowableValues();
+        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'status', must be one of '%s'",
+                $this->container['status'],
+                implode("', '", $allowedValues)
+            );
         }
 
         return $invalidProperties;
@@ -329,144 +341,119 @@ class WalletCreate implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets name
+     * Gets status
      *
-     * @return string
+     * @return string|null
      */
-    public function getName()
+    public function getStatus()
     {
-        return $this->container['name'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets name
+     * Sets status
      *
-     * @param string $name name
+     * @param string|null $status status
      *
      * @return self
      */
-    public function setName($name)
+    public function setStatus($status)
     {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        if (is_null($status)) {
+            throw new \InvalidArgumentException('non-nullable status cannot be null');
         }
-        if ((mb_strlen($name) > 120)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling WalletCreate., must be smaller than or equal to 120.');
+        $allowedValues = $this->getStatusAllowableValues();
+        if (!in_array($status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'status', must be one of '%s'",
+                    $status,
+                    implode("', '", $allowedValues)
+                )
+            );
         }
-
-        $this->container['name'] = $name;
+        $this->container['status'] = $status;
 
         return $this;
     }
 
     /**
-     * Gets externalId
+     * Gets inviteEmail
      *
      * @return string|null
      */
-    public function getExternalId()
+    public function getInviteEmail()
     {
-        return $this->container['externalId'];
+        return $this->container['inviteEmail'];
     }
 
     /**
-     * Sets externalId
+     * Sets inviteEmail
      *
-     * @param string|null $externalId externalId
+     * @param string|null $inviteEmail inviteEmail
      *
      * @return self
      */
-    public function setExternalId($externalId)
+    public function setInviteEmail($inviteEmail)
     {
-        if (is_null($externalId)) {
-            throw new \InvalidArgumentException('non-nullable externalId cannot be null');
+        if (is_null($inviteEmail)) {
+            throw new \InvalidArgumentException('non-nullable inviteEmail cannot be null');
         }
-        if ((mb_strlen($externalId) > 128)) {
-            throw new \InvalidArgumentException('invalid length for $externalId when calling WalletCreate., must be smaller than or equal to 128.');
-        }
-
-        $this->container['externalId'] = $externalId;
+        $this->container['inviteEmail'] = $inviteEmail;
 
         return $this;
     }
 
     /**
-     * Gets taxId
+     * Gets invitePhone
      *
      * @return string|null
      */
-    public function getTaxId()
+    public function getInvitePhone()
     {
-        return $this->container['taxId'];
+        return $this->container['invitePhone'];
     }
 
     /**
-     * Sets taxId
+     * Sets invitePhone
      *
-     * @param string|null $taxId CNPJ obrigatório no modo walletMode=kyc
+     * @param string|null $invitePhone invitePhone
      *
      * @return self
      */
-    public function setTaxId($taxId)
+    public function setInvitePhone($invitePhone)
     {
-        if (is_null($taxId)) {
-            throw new \InvalidArgumentException('non-nullable taxId cannot be null');
+        if (is_null($invitePhone)) {
+            throw new \InvalidArgumentException('non-nullable invitePhone cannot be null');
         }
-        $this->container['taxId'] = $taxId;
+        $this->container['invitePhone'] = $invitePhone;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets rejection
      *
-     * @return string|null
+     * @return \AurePayGenerated\Model\WalletVerificationRejection|null
      */
-    public function getEmail()
+    public function getRejection()
     {
-        return $this->container['email'];
+        return $this->container['rejection'];
     }
 
     /**
-     * Sets email
+     * Sets rejection
      *
-     * @param string|null $email E-mail do titular para convite KYC (modo kyc)
+     * @param \AurePayGenerated\Model\WalletVerificationRejection|null $rejection rejection
      *
      * @return self
      */
-    public function setEmail($email)
+    public function setRejection($rejection)
     {
-        if (is_null($email)) {
-            throw new \InvalidArgumentException('non-nullable email cannot be null');
+        if (is_null($rejection)) {
+            throw new \InvalidArgumentException('non-nullable rejection cannot be null');
         }
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets phone
-     *
-     * @return string|null
-     */
-    public function getPhone()
-    {
-        return $this->container['phone'];
-    }
-
-    /**
-     * Sets phone
-     *
-     * @param string|null $phone Telefone do titular para convite KYC (modo kyc)
-     *
-     * @return self
-     */
-    public function setPhone($phone)
-    {
-        if (is_null($phone)) {
-            throw new \InvalidArgumentException('non-nullable phone cannot be null');
-        }
-        $this->container['phone'] = $phone;
+        $this->container['rejection'] = $rejection;
 
         return $this;
     }
