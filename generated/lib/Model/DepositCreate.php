@@ -60,7 +60,6 @@ class DepositCreate implements ModelInterface, ArrayAccess, \JsonSerializable
         'method' => 'string',
         'amount' => 'int',
         'reference' => 'string',
-        'expiration' => '\DateTime',
         'callbackUrl' => 'string',
         'customer' => '\AurePayGenerated\Model\CustomerInput',
         'metadata' => 'array<string,mixed>',
@@ -78,7 +77,6 @@ class DepositCreate implements ModelInterface, ArrayAccess, \JsonSerializable
         'method' => null,
         'amount' => null,
         'reference' => null,
-        'expiration' => 'date-time',
         'callbackUrl' => 'uri',
         'customer' => null,
         'metadata' => null,
@@ -94,7 +92,6 @@ class DepositCreate implements ModelInterface, ArrayAccess, \JsonSerializable
         'method' => false,
         'amount' => false,
         'reference' => false,
-        'expiration' => false,
         'callbackUrl' => false,
         'customer' => false,
         'metadata' => false,
@@ -190,7 +187,6 @@ class DepositCreate implements ModelInterface, ArrayAccess, \JsonSerializable
         'method' => 'method',
         'amount' => 'amount',
         'reference' => 'reference',
-        'expiration' => 'expiration',
         'callbackUrl' => 'callbackUrl',
         'customer' => 'customer',
         'metadata' => 'metadata',
@@ -206,7 +202,6 @@ class DepositCreate implements ModelInterface, ArrayAccess, \JsonSerializable
         'method' => 'setMethod',
         'amount' => 'setAmount',
         'reference' => 'setReference',
-        'expiration' => 'setExpiration',
         'callbackUrl' => 'setCallbackUrl',
         'customer' => 'setCustomer',
         'metadata' => 'setMetadata',
@@ -222,7 +217,6 @@ class DepositCreate implements ModelInterface, ArrayAccess, \JsonSerializable
         'method' => 'getMethod',
         'amount' => 'getAmount',
         'reference' => 'getReference',
-        'expiration' => 'getExpiration',
         'callbackUrl' => 'getCallbackUrl',
         'customer' => 'getCustomer',
         'metadata' => 'getMetadata',
@@ -304,7 +298,6 @@ class DepositCreate implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('method', $data ?? [], 'pix');
         $this->setIfExists('amount', $data ?? [], null);
         $this->setIfExists('reference', $data ?? [], null);
-        $this->setIfExists('expiration', $data ?? [], null);
         $this->setIfExists('callbackUrl', $data ?? [], null);
         $this->setIfExists('customer', $data ?? [], null);
         $this->setIfExists('metadata', $data ?? [], null);
@@ -455,33 +448,6 @@ class DepositCreate implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable reference cannot be null');
         }
         $this->container['reference'] = $reference;
-
-        return $this;
-    }
-
-    /**
-     * Gets expiration
-     *
-     * @return \DateTime|null
-     */
-    public function getExpiration()
-    {
-        return $this->container['expiration'];
-    }
-
-    /**
-     * Sets expiration
-     *
-     * @param \DateTime|null $expiration expiration
-     *
-     * @return self
-     */
-    public function setExpiration($expiration)
-    {
-        if (is_null($expiration)) {
-            throw new \InvalidArgumentException('non-nullable expiration cannot be null');
-        }
-        $this->container['expiration'] = $expiration;
 
         return $this;
     }
